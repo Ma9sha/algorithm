@@ -11,7 +11,7 @@ def last_value(number)
 end
 
 i = 5000
-CSV.open("file.csv", "w") do |csv|
+CSV.open("last.csv", "w") do |csv|
 csv << ["range", "time_taken"]
 while i < 100000 do
   average_time = last_value(i)
