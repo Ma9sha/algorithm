@@ -1,17 +1,11 @@
 require 'benchmark'
-start_time = Time.now
-def reverse_string(string)
-  string = string.split("")
-  reversed = []
-  string.each do |i|
-    reversed.unshift(i)
-  end
-  return reversed.join("")
+require 'json'
+
+def reverse(number)
+  num = number
+  time = Benchmark.realtime {num.reverse}
+  puts "time taken to reverse #{time*1000}"
+  print num.reverse
 end
-# puts reverse_string('Manisha')
-end_time = Time.now
-puts "time taken to reverse a string #{(end_time - start_time)}"
-  
-
-
-
+num = [1,5,9,3,7,40,67]
+reverse(num)
