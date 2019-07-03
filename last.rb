@@ -2,12 +2,16 @@ require 'benchmark'
 require 'csv'
 
 def last_value(number)
-  list = [1]
-  list1 = list * number
-  total_time = 10.times { Benchmark.realtime {list1.last} }
-  average_time = total_time / 10.0
-  # puts "Time taken to show the last element #{time*1000} seconds"
-  return average_time.round(4)
+  list = [number]
+  total = 0
+  i = 1
+  while i <= 10 do
+  total_time = Benchmark.realtime {list.last}
+  total += total_time
+  i += 1
+  end
+  average_time = total / 10.0 
+  return average_time*1000
 end
 
 i = 5000
