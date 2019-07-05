@@ -20,12 +20,12 @@ arr = []
   while i <= 100000 do
     average_time = reverse_num(i)
     val_hash = {
-    "range" => i,
-    "time" => average_time
+    "x" => i,
+    "y" => average_time
     }
     arr << val_hash
     i += 5000
-    File.write("reverse.json", arr.to_json)
+    File.write("data.json", arr.to_json)
 
   end
 
