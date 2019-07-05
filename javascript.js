@@ -14,9 +14,9 @@ function load(){
         
         datasets: [{
             label: 'Time Dataset',
-            
-        data: data1
-            
+            data: data1,
+            showLine: true,
+            fill: false
               }]
             },
     options: {
@@ -24,6 +24,7 @@ function load(){
             xAxes: [{
                 type: 'linear',
                 position: 'bottom'
+                
             }]
         }
     }
